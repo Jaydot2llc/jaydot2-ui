@@ -19,6 +19,9 @@ export function Welcome() {
         <p className="mt-2 text-center">
           Contact us at <a href="mailto:info@jaydot2.com">info@jaydot2.com</a>
         </p>
+        <p className="mt-2 text-center text-3xl text-cyan-700 font-bold">
+          Website Update Coming Soon!
+        </p>
       </div>
     </main>
   );
