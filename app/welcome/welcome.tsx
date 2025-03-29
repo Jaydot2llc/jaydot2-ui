@@ -1,29 +1,30 @@
-import logoDark from "./logo-dark.svg";
-import jaydot2Logo from '../images/jaydot2logo.jpg';
+import heroImg from '../images/tech_hero1.jpg';
 
 export function Welcome() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4 section-container">
-      <div className="flex flex-col items-center">
-        <img src={jaydot2Logo} alt="Jaydot2" className="w-32 h-32" />
-        <h1 className="text-5xl font-bold mt-4">Welcome to Jaydot<span className="text-cyan-700">2</span>!</h1>
-        <p className="mt-2 text-center">
-          Jaydot2 is a full-stack web development company specializing in React, TypeScript, Node.js, Spring Boot, Java, and Kotlin.
-        </p>
-        <p className="mt-2 text-center">
-          We build web applications for small businesses, startups, and entrepreneurs.
-        </p>
-        <p className="mt-2 text-center">
-          We also provide consulting services for web development projects.
-        </p>
-        <p className="mt-2 text-center">
-          Contact us at <a href="mailto:info@jaydot2.com">info@jaydot2.com</a>
-        </p>
-        <p className="mt-2 text-center text-3xl text-cyan-700 font-bold">
-          Website Update Coming Soon!
-        </p>
-      </div>
-    </main>
+    <section id="hero">
+        {/* <!-- Hero Container --> */}
+        <div className="container flex flex-col-reverse mx-auto p-6 lg:flex-row">
+            {/* <!-- Content Container --> */}
+            <div className="flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52">
+                <h1 className="text-5xl font-bold text-center lg:text-6xl lg:max-w-md lg:text-left">
+                    More than just another company
+                </h1>
+                <p className="text-2xl text-center text-gray-400 lg:max-w-md lg:text-left">
+                  At Jaydot2, we are committed to delivering <span className='font-bold text-cyan-700'>excellence</span> in software development through cutting-edge <span className='font-bold text-cyan-700'>innovation</span> and <span className='font-bold text-cyan-700'>creativity</span>. Guided by integrity, we build high-quality products, services, and custom support solutions that empower businesses and individuals alike.
+                </p>
+                <div className="mx-auto lg:mx-0">
+                    <a href="#" className="py-5 px-10 text-2xl font-bold text-white bg-cyan rounded-full lg:py-4 hover:opacity-70">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            {/* <!-- Image --> */}
+            <div className="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
+                <img src={heroImg} className="shadow-2xl shadow-gray-800 rounded-sm" alt="Illustration Working" />
+            </div>
+        </div>
+    </section>
   );
 }
 
