@@ -1,6 +1,6 @@
-# Welcome to React Router!
+# Jaydot2 Website UI
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This is the source code repository for the Jaydot2 website UI.  It is build with React Router.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
