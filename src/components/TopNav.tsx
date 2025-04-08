@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import logoImg from '../images/jaydot2logo.jpg';
 import { NavLink } from 'react-router';
 
@@ -6,7 +6,6 @@ import { NavLink } from 'react-router';
 
 export default function TopNav() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const modal = useRef<HTMLDialogElement | null>(null);
 
     const toggleHamburgerMenu = () => {
         const menuBtn = document.getElementById('menu-btn');
@@ -21,11 +20,6 @@ export default function TopNav() {
         setMenuOpen(!menuOpen);
     }
 
-    const handleOpenComingSoonModal = () => {
-        console.log('Opening Coming Soon Modal');
-        // modal.current?.open();
-    }
-
     return (
         <>
             <nav className="relative container mx-auto p-6">
@@ -35,7 +29,7 @@ export default function TopNav() {
                     <div className="flex items-center space-x-20">
                         {/* <!-- Logo Container --> */}
                         <div className="logo-container">
-                            <NavLink to="/">
+                            <NavLink to="/home">
                                 <img src={logoImg} alt="Jaydot2 Logo" />
                             </NavLink>
                         </div>

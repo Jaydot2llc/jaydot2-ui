@@ -1,102 +1,112 @@
-# Jaydot2 Website UI
+# React + TypeScript + Vite
 
-This is the source code repository for the Jaydot2 website UI.  It is build with React Router.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Expanding the ESLint configuration
 
-## Getting Started
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-### Development
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Start the development server with HMR:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```bash
-npm run dev
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
+## Additional Dependencies and Configuration
+
+```sh
+npm install lucide-react
+npm install vite-tsconfig-paths --save-dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+### Add Tailwind Dependencies
 
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
+Install the Tailwind CSS dependencies:
+```sh
+npm install tailwindcss @tailwindcss/vite
 ```
 
-## Deployment
+Update the `vite.config.ts` configuration file with tailwind css.
 
-### Docker Deployment
-
-This template includes three Dockerfiles optimized for different package managers:
-
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
-
-To build and run using Docker:
-
-```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+```js
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+Import Tailwind CSS to the core CSS file.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+```css
+@import "tailwindcss";
 ```
 
-## Styling
+### Add React Router
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+```sh
+npm install react-router react-router-dom
+```
 
----
+Add browser router around the application.
 
-Built with ❤️ using React Router.
+```ts
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router";
+import App from "./app";
+
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+```
 
 ## References
+
+- [React Router Installation](https://reactrouter.com/start/declarative/installation)

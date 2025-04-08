@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect, useImperativeHandle } from "react";
+import { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-export default function ComingSoonModal({ref}: {ref: React.RefObject<HTMLDialogElement | null>}) {
+export default function ComingSoonModal() {
     const [dialogElementContent, setDialogElementContent] = useState<HTMLElement | null>(null);
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
@@ -9,17 +9,6 @@ export default function ComingSoonModal({ref}: {ref: React.RefObject<HTMLDialogE
         const comingSoonElement: HTMLElement = document.body!;
         setDialogElementContent(comingSoonElement);
     }, [dialogRef]);
-
-    // useImperativeHandle(ref, () => {
-    //     return {
-    //       open: () => {
-    //         dialogRef.current?.showModal();
-    //       },
-    //       close: () => {
-    //         dialogRef.current?.close();
-    //     }
-    //   }
-    // });
     
 
     return createPortal(

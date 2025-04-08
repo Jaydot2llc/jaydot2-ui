@@ -1,6 +1,6 @@
 import heroImg from '../images/tech_hero1.jpg';
 
-export function Welcome() {
+export default function Hero() {
   return (
     <section id="hero">
         {/* <!-- Hero Container --> */}
@@ -27,4 +27,3 @@ export function Welcome() {
     </section>
   );
 }
-

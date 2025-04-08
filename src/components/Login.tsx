@@ -1,12 +1,12 @@
 import {useRef, useState} from "react";
 import { NavLink } from 'react-router';
-import logoImg from '../images/jaydot2logo.jpg';
+// import logoImg from '../images/jaydot2logo.jpg';
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     let usernameInput = useRef<HTMLInputElement>(null); 
-    let usernameIsInvalid: boolean = false;
+    // let usernameIsInvalid: boolean = false;
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -24,13 +24,11 @@ export default function Login() {
                     src={logoImg}
                     className="mx-auto h-10 w-auto"
                 /> */}
-                <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
-                    Sign in to your account
-                </h2>
+                {isLoggedIn ? <p className="text-center text-lg">You are logged in as {username}</p>: <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>}
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form action="#" method="POST" onSubmit={handleSubmit} className="space-y-6">
+                <form action="#" method="POST" className="space-y-6" onSubmit={handleSubmit}>
                     <div>
                     <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
                         Email address

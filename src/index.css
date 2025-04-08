@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+
+  --font-sans: 'Bai Jamjuree', sans-serif;
+
+  --color-strongCyan: hsl(171, 66%, 44%);
+  --color-lightBlue: hsl(233, 100%, 69%);
+  --color-darkGrayishBlue: hsl(210, 10%, 33%);
+  --color-grayishBlue: hsl(201, 11%, 66%);
+}
+
+@layer base {
+  h3 {
+      @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+  h4 {
+      @apply mb-5 mt-2 text-3xl font-bold text-darkGrayishBlue;
+  }
+  h5 {
+      @apply mb-5 mt-1 text-2xl font-bold text-darkGrayishBlue;
+  }
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+h3 {
+  @apply text-4xl font-bold text-cyan-700 mt-4;
+}
+
+ul {
+  @apply mt-4 md:list-disc md:list-inside;
+}
+
+ul li {
+  @apply mt-2 md:mt-0;
+}
+
+.jaydot2-button {
+  @apply flex w-full justify-center rounded-full bg-cyan-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-10 text-center lg:text-left;
+}
+
+.ficon:hover {
+  filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg) brightness(89%) contrast(85%);
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s ease;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
