@@ -8,11 +8,11 @@ export default function Login() {
     let usernameInput = useRef<HTMLInputElement>(null); 
     let usernameIsInvalid: boolean = false;
 
-    function handleSubmit(event : React.MouseEvent<HTMLButtonElement>) {
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         if (usernameInput.current) {
-        setUsername(usernameInput.current.value);
-        setIsLoggedIn(true);
+            setUsername(usernameInput.current.value);
+            setIsLoggedIn(true);
         }
     }
     return (
@@ -30,7 +30,7 @@ export default function Login() {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form action="#" method="POST" className="space-y-6">
+                <form action="#" method="POST" onSubmit={handleSubmit} className="space-y-6">
                     <div>
                     <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
                         Email address
