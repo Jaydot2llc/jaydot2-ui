@@ -18,6 +18,7 @@ export default function Login() {
     return (
         <section id="login" className="container flex flex-col mx-auto h-full p-6">
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+                <h2 className="text-6xl font-bold text-center">Login</h2>
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 {/* <img
                     alt="Jaydot2 LLC"
