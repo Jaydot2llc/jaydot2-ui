@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { NavLink } from 'react-router';
 import Button from './ui/Button';
 import Input from './ui/Input';
@@ -9,18 +9,18 @@ import { FaFacebook, FaApple } from 'react-icons/fa';
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // let usernameInput = useRef<HTMLInputElement>(null); 
+  const usernameInput = useRef<HTMLInputElement>(null); 
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Logging in with:', { email, password });
-  //   if (usernameInput.current) {
-  //     setUsername(usernameInput.current.value);
-  //     setIsLoggedIn(true);
-  // }
-  setIsLoggedIn(true);
+    if (usernameInput.current) {
+      setUsername(usernameInput.current.value);
+      setIsLoggedIn(true);
+  }
+
     // Replace with your email/password authentication logic
   };
 
@@ -52,7 +52,7 @@ const Login: React.FC = () => {
                     className="mx-auto h-10 w-auto"
                 /> */}
                 {isLoggedIn ? <p className="text-center text-lg">You are logged in as {username}</p>: <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>}
-                </div>
+          </div>
           <form onSubmit={handleLogin} className="space-y-4">
             <Input
               type="email"
