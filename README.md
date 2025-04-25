@@ -107,6 +107,14 @@ ReactDOM.createRoot(root).render(
 );
 ```
 
+### Install Test Dependencies
+
+```sh
+npm install -D jest @testing-library/react ts-jest @types/jest ts-node @testing-library/jest-dom jest-environment-jsdom @testing-library/user-event
+```
+
+
 ## References
 
 - [React Router Installation](https://reactrouter.com/start/declarative/installation)
+- [Effortless Testing Setup for React with Vite, TypeScript, Jest, and React Testing Library 2025](https://dev.to/teyim/effortless-testing-setup-for-react-with-vite-typescript-jest-and-react-testing-library-1c48)

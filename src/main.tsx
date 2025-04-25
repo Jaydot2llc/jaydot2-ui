@@ -9,7 +9,7 @@ import About from './components/About.tsx';
 import Contact from './components/Contact.tsx';
 import Products from './components/Products.tsx';
 import Services from './components/Services.tsx';
-import Login from './components/Login.tsx';
+import AltLogin from './components/AltLogin.tsx';
 import Register from './components/Register.tsx';
 import Research from './components/Research.tsx';
 import Support from './components/Support.tsx';
@@ -26,7 +26,7 @@ const router = createBrowserRouter(
     <Route path='about' element={<About />} />
     <Route path='products' element={<Products />} />
     <Route path='services' element={<Services />} />
-    <Route path='login' element={<Login />} />
+    <Route path='login' element={<AltLogin />} />
     <Route path='register' element={<Register />} />
     <Route path='research' element={<Research />} />
     <Route path='contact' element={<Contact />} />

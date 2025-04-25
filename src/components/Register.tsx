@@ -4,6 +4,8 @@ import { NavLink } from 'react-router';
 export default function Register() {
     const [passwordsMatch, setPasswordsMatch] = useState<boolean>(true);
 
+    const mimimumPasswordLength = 8;
+
     function handleRegister(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         console.log("Register");
@@ -82,6 +84,7 @@ export default function Register() {
                             id="password"
                             name="password"
                             type="password"
+                            minLength={mimimumPasswordLength}
                             required
                             autoComplete="current-password"
                             className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
