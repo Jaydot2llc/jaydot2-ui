@@ -38,6 +38,16 @@ export default function Services() {
                     <li><span className="font-bold">Small Businesses & Nonprofits</span> – For clients with straightforward requirements, we provide PHP-based CMS solutions using platforms like <span className="font-bold">Drupal</span> and <span className="font-bold">WordPress</span> to ensure ease of use and flexibility.</li>
                     <li><span className="font-bold">Enterprises & Large Organizations</span>For complex transaction management, high security, and enterprise-grade functionality, we implement Java-based CMS solutions using platforms like <span className="font-bold">Magnolia</span> and <span className="font-bold">OpenCMS</span>.</li>
                 </ul>
+                {/* Shopify Consulting Services */}
+                <h3>Shopify Customization and Support</h3>
+                <p>We provide online e-commerce customization services on the Shopify platform.  Whether you're starting your first store or scaling a multi-channel empire, our Shopify consulting services are tailored to unlock your brand’s full potential. We help you turn clicks into customers—and customers into loyal fans.  Our offerings include the following:</p>
+                <ul>
+                    <li><span className="font-bold">Shopify Store Setup & Customization</span> – From theme selection to pixel-perfect customizations, we make your Shopify store look and feel like you.</li>
+                    <li><span className="font-bold">Shopify Development</span> – Need advanced features, custom apps, or third-party integrations? We've got the code and the creativity to bring it to life.</li>
+                    <li><span className="font-bold">Migration to Shopify</span> – Say goodbye to clunky platforms. We handle seamless migrations from WooCommerce, Magento, BigCommerce, and more.</li>
+                    <li><span className="font-bold">Conversion Optimization & Strategy</span> – We analyze, test, and fine-tune every element of your store—from checkout flow to product pages—to boost engagement and sales.</li>
+                    <li><span className="font-bold">Shopify Analytics & Growth Consulting</span> – Make data-driven decisions. We’ll set up the right analytics tools and help you interpret what’s working—and what’s not.</li>
+                </ul>
                 {/* Enterprise Application Development Container */}
                 <h3>Enterprise Application Development</h3>
                 <p>
