@@ -107,6 +107,21 @@ ReactDOM.createRoot(root).render(
 );
 ```
 
+### Install AWS Amplify Dependencies
+
+Setup Amplify in the project and install the dependencies.
+
+```sh
+npm create amplify@latest
+npm install aws-amplify @aws-amplify/ui-react
+```
+
+Install the development dependencies:
+
+```sh
+npm install @aws-amplify/backend @aws-amplify/backend-cli aws-cdk aws-cdk-lib constructs tsx --save-dev
+```
+
 ### Install Test Dependencies
 
 ```sh
