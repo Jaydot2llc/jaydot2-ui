@@ -1,4 +1,14 @@
-export async function fetchData(url: string, method: string = 'GET', body: any = null) {
+import { generateClient } from "aws-amplify/data";
+// TODO: Update the import path below to the correct location of your Schema type.
+import type { Schema } from "../../amplify/data/resource";
+
+const client = generateClient<Schema>();
+
+export function createCustomer(data: { firstName: string; lastName: string; email: string; password: string }) {
+  return client.models.Customer.create(data);
+}
+
+export async function fetchData(url: string, method: string = 'GET', body: unknown = null) {
   const headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
@@ -25,7 +35,7 @@ export async function fetchData(url: string, method: string = 'GET', body: any =
   }
 }
 
-export async function fetchDataWithAuth(url: string, method: string = 'GET', body: any = null) {
+export async function fetchDataWithAuth(url: string, method: string = 'GET', body: unknown = null) {
   const token = localStorage.getItem('token');
   const headers = {
     'Content-Type': 'application/json',
@@ -54,6 +64,6 @@ export async function fetchDataWithAuth(url: string, method: string = 'GET', bod
   }
 }   
 
-export async function postData(url: string, body: any) {
+export async function postData(url: string, body: unknown) {
   return fetchData(url, 'POST', body);
 }
