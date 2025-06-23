@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import type { Schema } from "../../amplify/data/resource";
 import logoImg from '../images/jaydot2logo.jpg';
 import { NavLink } from 'react-router';
+import { generateClient } from "aws-amplify/data";
 
-
+const client = generateClient<Schema>();
 
 export default function TopNav() {
+    const [customer, setCustomer] = useState<Array<Schema["Customer"]["type"]>>([]);
+
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        client.models.Customer.observeQuery().subscribe({
+            next: (data) => { setCustomer(data.items) },
+    })
+    }, []);
 
     const toggleHamburgerMenu = () => {
         const menuBtn = document.getElementById('menu-btn');
@@ -43,7 +53,9 @@ export default function TopNav() {
 
                     {/* <!-- Flex Container for the Right Buttons Menu --> */}
                     <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
+                        {customer.length > 0 && 
                         <NavLink className="hover:text-cyan-800" to="/login">Login</NavLink>
+        }
                         <NavLink to="/register" className="px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70">
                             Register
                         </NavLink>
