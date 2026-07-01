@@ -1,0 +1,56 @@
+version: 2
+
+updates:
+  # NPM dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "America/Chicago"
+
+    open-pull-requests-limit: 10
+
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+    labels:
+      - "dependencies"
+      - "automated"
+
+    reviewers:
+      - "your-github-username"
+
+    assignees:
+      - "your-github-username"
+
+    versioning-strategy: "increase"
+
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+
+      testing:
+        patterns:
+          - "jest*"
+          - "@testing-library/*"
+          - "cypress*"
+
+      build-tools:
+        patterns:
+          - "vite*"
+          - "webpack*"
+          - "eslint*"
+          - "prettier*"
+          - "@typescript-eslint/*"
+          - "typescript"
+
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
