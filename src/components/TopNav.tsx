@@ -55,10 +55,12 @@ export default function TopNav() {
                     <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
                         {customer.length > 0 && 
                         <NavLink className="hover:text-cyan-800" to="/login">Login</NavLink>
-        }
+                        }
+                        {false && /*customer.length === 0 && hide button */
                         <NavLink to="/register" className="px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70">
                             Register
                         </NavLink>
+        }
                     </div>
                     {/* <!-- Hamburger Menu --> */}
                     <button id="menu-btn" type="button" className="z-40 block hamburger lg:hidden focus:outline-none" onClick={toggleHamburgerMenu}>
