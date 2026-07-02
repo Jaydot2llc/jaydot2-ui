@@ -56,14 +56,7 @@ export default function TopNav() {
 
                     {/* <!-- Flex Container for the Right Buttons Menu --> */}
                     <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-                        {customer.length > 0 && 
-                        <NavLink className="hover:text-cyan-800" to="/login">Login</NavLink>
-                        }
-                        {false && /*customer.length === 0 && hide button */
-                        <NavLink to="/register" className="px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70">
-                            Register
-                        </NavLink>
-        }
+    
                     </div>
                     {/* <!-- Hamburger Menu --> */}
                     <button id="menu-btn" type="button" className="z-40 block hamburger lg:hidden focus:outline-none" onClick={toggleHamburgerMenu}>
@@ -78,8 +71,6 @@ export default function TopNav() {
                         <NavLink to="/about" onClick={toggleHamburgerMenu} className="w-full text-center">About</NavLink>
                         <NavLink to="/products" onClick={toggleHamburgerMenu} className="w-full text-center">Products</NavLink>
                         <NavLink to="/services" onClick={toggleHamburgerMenu} className="w-full text-center">Services</NavLink>
-                        <NavLink to="/login" onClick={toggleHamburgerMenu} className="w-full pt-6 border-t border-gray-400 text-center">Login</NavLink>
-                        <NavLink to="/register" onClick={toggleHamburgerMenu} className="w-full text-center py-3 rounded-full bg-blue-900">Register</NavLink>
                     </div>
                 </div>
             </nav>
