@@ -1,21 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { Schema } from "../../amplify/data/resource";
 import logoImg from '../images/jaydot2logo.jpg';
 import { NavLink } from 'react-router';
 import { generateClient } from "aws-amplify/data";
 
-const client = generateClient<Schema>();
-
 export default function TopNav() {
     // const [customer, setCustomer] = useState<Array<Schema["Customer"]["type"]>>([]);
 
     const [menuOpen, setMenuOpen] = useState(false);
-
-    // useEffect(() => {
-    //     client.models.Customer.observeQuery().subscribe({
-    //         next: (data) => { setCustomer(data.items) },
-    // })
-    // }, []);
 
     const toggleHamburgerMenu = () => {
         const menuBtn = document.getElementById('menu-btn');
