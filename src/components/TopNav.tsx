@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import type { Schema } from "../../amplify/data/resource";
 import logoImg from '../images/jaydot2logo.jpg';
 import { NavLink } from 'react-router';
-import { generateClient } from "aws-amplify/data";
 
 export default function TopNav() {
-    // const [customer, setCustomer] = useState<Array<Schema["Customer"]["type"]>>([]);
 
     const [menuOpen, setMenuOpen] = useState(false);
 
