@@ -40,7 +40,7 @@ const router = createBrowserRouter(
   )
 );
 
-Amplify.configure(outputs); //development only
+//Amplify.configure(outputs); //development only
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
