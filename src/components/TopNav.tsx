@@ -45,9 +45,12 @@ export default function TopNav() {
                         </div>
                         {/* <!-- Left Menu --> */}
                         <div className="hidden space-x-8 font-bold lg:flex">
-                            <NavLink to="/about" className="text-grayishViolet hover:text-cyan-800">About</NavLink>
-                            <NavLink to="/products" className="text-grayishViolet hover:text-cyan-800">Products</NavLink>
+                            <NavLink to="/home" className="text-grayishViolet hover:text-cyan-800">Home</NavLink>
                             <NavLink to="/services" className="text-grayishViolet hover:text-cyan-800">Services</NavLink>
+                            <NavLink to="/case-studies" className="text-grayishViolet hover:text-cyan-800">Case Studies</NavLink>
+                            <NavLink to="/resources" className="text-grayishViolet hover:text-cyan-800">Resources</NavLink>
+                            <NavLink to="/about" className="text-grayishViolet hover:text-cyan-800">About</NavLink>
+                            <NavLink to="/contact" className="text-grayishViolet hover:text-cyan-800">Contact</NavLink>
                         </div>
                     </div>
 

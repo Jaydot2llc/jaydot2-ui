@@ -18,6 +18,8 @@ import Support from './components/Support.tsx';
 import PrivacyPolicy from './components/PrivacyPolicy.tsx';
 import Faqs from './components/Faqs.tsx'; 
 import NotFound from './components/NotFound.tsx';
+import CaseStudies from './components/CaseStudies.tsx';
+import Resources from './components/Resources.tsx';
 
 
 const router = createBrowserRouter(
@@ -28,6 +30,8 @@ const router = createBrowserRouter(
     <Route path='about' element={<About />} />
     <Route path='products' element={<Products />} />
     <Route path='services' element={<Services />} />
+    <Route path='case-studies' element={<CaseStudies />} />
+    <Route path='resources' element={<Resources />} />
     <Route path='login' element={<AltLogin />} />
     <Route path='register' element={<Register />} />
     <Route path='research' element={<Research />} />
