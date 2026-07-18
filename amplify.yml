@@ -6,7 +6,8 @@ frontend:
         - node -v
         - npm -v
         - npm view vite-tsconfig-paths versions
-        - npm install
+        - rm -rf node_modules
+        - npm ci
     build:
       commands:
         - npm run build
