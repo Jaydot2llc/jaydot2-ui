@@ -117,7 +117,7 @@ const faqs = [
   },
 ];
 
-function AuditSection({ section }) {
+function AuditSection({ section }: { section: (typeof auditSections)[number] }) {
   return (
     <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
       <div className="flex items-start gap-4">
@@ -159,7 +159,7 @@ function AuditSection({ section }) {
   );
 }
 
-function FAQItem({ question, answer }) {
+function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
 
   return (
