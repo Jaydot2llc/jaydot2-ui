@@ -14,6 +14,7 @@ import Services from './components/Services.tsx';
 import Research from './components/Research.tsx';
 import Support from './components/Support.tsx';
 import PrivacyPolicy from './components/PrivacyPolicy.tsx';
+import ShopifyStoreAudit from './components/ShopifyStoreAudit.tsx';
 import Faqs from './components/Faqs.tsx'; 
 import NotFound from './components/NotFound.tsx';
 import CaseStudies from './components/CaseStudies.tsx';
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
     <Route path='about' element={<About />} />
     <Route path='products' element={<Products />} />
     <Route path='services' element={<Services />} />
+    <Route path='shopify-store-audit' element={<ShopifyStoreAudit />} />
     <Route path='case-studies' element={<CaseStudies />} />
     <Route path='resources' element={<Resources />} />
     <Route path='research' element={<Research />} />
