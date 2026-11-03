@@ -2,7 +2,7 @@ export default function About() {
     return (
         <section id="about" className="container flex flex-col mx-auto p-6 lg:flex-row">
             <h2 className="text-6xl font-bold text-center lg:text-left lg:w-1/2">About</h2>
-            <div className="text-xl text-center text-gray-600 lg:w-1/2 lg:text-left">
+            <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
                 <p className="mb-6">Jaydot2 was originally founded as Jaydot2, LLC, in 2006 as a web development consulting firm.  Since then we have branched into other areas including mobile development, cloud development, software products, and business services.</p>
                 <h3>Our Mission</h3>
                 <p>Our mission is to provide expert technical and business consulting services in specialized areas to help organizations achieve their digital transformation goals. We are committed to delivering high-quality solutions that drive innovation, improve efficiency, and create value for our clients.</p>

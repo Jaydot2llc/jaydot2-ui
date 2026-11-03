@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <section id="contact" className="container flex flex-col mx-auto p-6 lg:flex-row">
             <h2 className="text-6xl font-bold text-center lg:text-left lg:w-1/2">Contact</h2>
-            <div className="lg:w-1/2 max-w-3xl mx-auto p-6 space-y-6 text-center md:text-left">
+            <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
                 <p>We’d love to hear from you! Whether you have questions about our services, need technical support, or want to explore a partnership, our team is here to help.</p>
                 <span className="font-bold">Email:</span>  <a href="mailto:support@jaydot2.com" className="text-blue-600">support@jaydot2.com</a> 
                 <p className="mt-4">Or simply fill out our contact form, and we’ll get back to you as soon as possible. Let’s build something amazing together!</p>

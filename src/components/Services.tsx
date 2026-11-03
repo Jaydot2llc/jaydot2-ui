@@ -2,8 +2,35 @@ export default function Services() {
     return (
         <section id="services" className="container flex flex-col mx-auto p-6 lg:flex-row">
             <h2 className="text-6xl font-bold text-center lg:text-left lg:w-1/2">Services</h2>
-            <div className="text-xl text-center text-gray-600 lg:w-1/2 lg:text-left">
+
+            {/* <div className="text-xl text-center text-gray-600 lg:w-1/2 lg:text-left"> */}
+            {/* Shopify Store Audit Link */}
+            <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
                 <p className="mb-6">We provide expert technical and business consulting services in specialized areas to help organizations achieve their digital transformation goals. Our core services include mobile and web application development, content management system (CMS) customization, software-as-a-service (SaaS) implementation, and other advanced technical solutions.</p>
+                <h3>
+                    Shopify Store Audit
+                </h3>
+
+                <p className="mt-3 text-base leading-7 text-gray-600">
+                    Find opportunities to improve your Shopify store with a professional
+                    review of your storefront, mobile usability, product pages, basic SEO,
+                    and shopping experience. Receive a prioritized report within 3 business
+                    days after the required store access is received.
+                </p>
+
+                <p className="mt-4 text-xl font-bold text-gray-900">
+                    $249 <span className="text-sm font-normal text-gray-500">one-time fee</span>
+                </p>
+
+                <a
+                    href="/shopify-store-audit"
+                    className="mt-5 inline-flex items-center rounded-lg bg-gray-900 px-5 py-3 font-semibold text-white transition hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                >
+                    Learn More About the Audit
+                    <span aria-hidden="true" className="ml-2">→</span>
+                </a>
+            {/* </div> */}
+
                 {/* DevOps and Cloud Computing Container */}
                 <h3>DevOps and Cloud Computing</h3>
                 <p>We provide cloud-native application development and cloud management services using public and private cloud platforms. Our expertise includes:</p>
